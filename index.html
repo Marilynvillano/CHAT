@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="demo-3 no-js" >
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+  <title>Chat</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+
+  
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common-scripts.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+	<title>jquery</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+
+
+	$(document).ready(function(){
+			$("#send").click(function(e){
+				e.preventDefault();  //previene el evento click , q se detenga
+				var texto = $("#my-input").val();
+				var miPrimerMensaje = $("<p></p>").text(texto); //etiquetas al vuelo
+				$(".resultado").append(miPrimerMensaje);
+			}); 
+
+		});
+
+
+
+
+	</script>
+	<style type="text/css">
+		.elemento{
+			height: 20px;
+
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<div class="fondo-blanco">
+	<div class="cuadro-conversacion"></div>
+
+<div class="alert alert-success" role="alert">HOLA!!
+<br>
+Escribe en el campo de abajo y presiona Ok</div>
+
+
+
+
+<footer>
+	<div class="barra-mensaje">
+	<div class="row">
+	<div class="col-md-3">
+	<div class="btn-group">
+  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span></button>
+  	<ul class="dropdown-menu">
+    <li><a href="#"><div class="alert alert-success" role="alert"></div></a>
+    <li><a href="#"><div class="alert alert-info" role="alert"></div></a></li>
+    <li><a href="#"><div class="alert alert-warning" role="alert"></div></a></li>
+    <li><a href="#"><div class="alert alert-danger" role="alert"></div></a></li>
+  	</ul>
+	</div>
+	</div>
+
+	<div class="col-md-6">
+		<input type="text" id="my-input" class="form-control" placeholder="">
+		
+	</div>
+			
+	<div class="col-md-3">
+    <div class="input-group">
+        <a id="send" href="#">OK</a>
+				<div class="resultado"></div>
+    </div>
+  </div>
+	
+	</div>
+	</div>
+
+</footer>
+</div>
+</body>
+</html>
